@@ -85,21 +85,4 @@ O código não remove espaços do status. Utilize o texto `GERAR` conforme o pad
 Para gerar novamente um documento, altere o status do registro para `GERAR`.
 A alteração para `GERADO` ocorre na planilha, mas a macro não salva automaticamente a pasta de trabalho.
 ## Envio de e-mail
-O bloco de envio de e-mail está comentado. Na versão atual, nenhuma mensagem é criada ou enviada.
-Entretanto, esta instrução permanece ativa no início da macro:
-```vba
-Set OutlookApp = CreateObject("Outlook.Application")
-```
-Assim, a execução ainda tenta inicializar a automação do Outlook, mesmo quando apenas gera PDFs.
-A referência comentada para o destinatário utiliza a coluna J da aba `RESUMO`. Essa coluna está atualmente destinada ao saldo em 31/12/2025 e deve ser revista antes de ativar o envio.
-## Limitações
-- Não há tratamento de erros para falhas na exportação, no acesso à pasta ou na inicialização do Outlook.
-- O caminho de saída está fixo no código.
-- Os anos e as datas do documento estão fixos.
-- Os registros abaixo da última célula preenchida na coluna A não são processados.
-- Algumas variáveis utilizadas não estão declaradas no trecho original.
-- O código não valida a identificação dos investidores, os CNPJs ou os valores.
-- O nome do arquivo utiliza “Declaração IRRF”, enquanto o documento apresenta informações de capital, AFAC e dividendos. A nomenclatura deve ser validada pelo responsável antes da distribuição.
-## Privacidade
-O código contém um caminho local com nome de usuário. Antes de publicar no repositório, substitua esse caminho por um exemplo genérico.
-Não inclua no repositório planilhas preenchidas ou PDFs com nomes, identificações e valores reais dos investidores.
+O bloco de envio de e-mail está comentado. Caso seja necessário poderá ser utilizado futuramente
